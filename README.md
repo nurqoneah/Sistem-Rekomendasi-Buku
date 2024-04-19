@@ -78,6 +78,21 @@ Dari data rating pengguna, maka akan diidentifikasi buku-buku yang mirip dan bel
 
 ## **Evaluation**
 ### **Content Filtered Recommendation System**
+Buku yang dipilih untuk sample sebagai buku yang disukai pengguna. 
+|index|isbn|book\_title|author|
+|---|---|---|---|
+|4545|0965881199|The Diaries of Adam and Eve|Mark Twain|
+
+Hasil rekomendasi dari model yanng telah dibuat sebagai berikut:
+|index|book\_title|author|
+|---|---|---|
+|0|A Connecticut Yankee in King Arthur's Court \(Bantam Classic\)|Mark Twain|
+|1|A Murder, a Mystery and a Marriage: A Story|Mark Twain|
+|2|The Adventures of Tom Sawyer \(Penguin Popular Classics\)|Mark Twain|
+|3|The Adventures of Huckleberry Finn \(Bantam Classics\)|MARK TWAIN|
+|4|ADVENTURES OF HUCKLEBERRY FINN \(ENRICHED CLASSIC\)|Mark Twain|
+
+Dari hasil diatas disimpulkan bahwa seluruh item yang direkomendasikan presisi 100% dilihat dari authornya. 
 
 ### **Collaborative Filtered Recommendation System**
 Metriks eavaluasi yang digunakan untuk sistem rekomendasi buku dengan algoritma collaborative content filtering adalah metrik RMSE (Root Mean Squared Error).
@@ -107,3 +122,13 @@ Kekurangan RMSE:
 * Tidak selalu intuitif: Kadang-kadang sulit untuk menginterpretasikan apakah nilai RMSE yang rendah sudah cukup baik atau tidak, terutama jika tidak ada nilai referensi untuk perbandingan.
 
 Dalam proyek ini untuk menerapkan metrik ini gunakan parameter metrics untuk model yaitu `tf.keras.metrics.RootMeanSquaredError()` . Hasil dari metriks evaluasi untuk model rekomendasi buku dengan algirtma ini adalah sebagai berikut:
+
+![image](https://github.com/nurqoneah/Sistem-Rekomendasi-Buku/assets/89116610/6c877d79-8ec3-4a15-a610-26fd22be1cf1)
+
+dari hasil training diatas val_loss 0.6 dan val_rmse 0.2. 
+
+
+
+
+
+
